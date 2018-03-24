@@ -1,17 +1,42 @@
-## Before reading
+_Note: You have to wear an heart rate monitor to provide heart rate data to your strava activities and thus enjoy the below features._  
+
+## Heart Rate Stress Score (HRSS)
 ---
-You have to record inside strava activities your heart rate data through HR sensor to enjoy the below features.  
+In short, the _Heart Rate Stress Score_ represents an training load based on activity heart rate data. _HRSS_ depends on exercise duration and intensity. 
+It provides an good indicator to compare commitment between activities. _HRSS_ is more accurate than _TRIMP (TRaining IMPulse)_ itself (explained below), especially for fitness trend.
 
-## TRaining IMPulse or TRIMP 💗
+In full _HRSS_ is based on time in heart rate zones derived from an athlete's _Lactate Threshold Heart Rate (LTHR)_. _LTHR_ is the point, above which, increased blood acidification occurs in your body. 
+Above this threshold your endurance performance will rapidly decrease. By default _LTHR_ is 86% of _Max HR_. You can setup your own _LTHR_ in athlete settings.
+
+_HRSS_ is equivalent to _HrTSS™_ from TrainingPeaks [(see training stress scores explained by trainingpeaks.com)](https://help.trainingpeaks.com/hc/en-us/articles/204071944-Training-Stress-Scores-TSS-Explained) and is correlated to _Strava Suffer Score_
+
+**Mathematical view:**
+
+> $HRSS = \frac{Activity~Trimp}{OneHourTrimp@LTHR}~\times~100$
+
+where
+
+> $OneHourTrimp@LTHR = 60min~\times~HRR@LTHR~\times~0.64^{k~\times~HRR@LTHR}$
+
+with
+
+> $HRR@LTHR = \frac{LTHR~-~HR_{rest}}{HR_{max}~-~HR_{rest}}~~and~~k=1.92~~for~mens~~or~~1.67~~for~womens$
+
+
+_TRIMP_ stand for _TRaining IMPulse_ and _HRR_ for _Heart Rate Reserve_. They are both explained below.
+
+
+## TRaining IMPulse (TRIMP)
 ---
 
-Represents the amount of heart stress during an activity. The longer you ride at full throttle, the more you SCORE !! So go outside suffer for twelve hours! Or stay here to understand what it returns... _TRIMP_ is a way to model the human athletic performance. This concept has been introduced by Dr Eric Banister.  
+_TRIMP_ has been introduced by Dr Eric Banister to model the human athletic performance. Like _HRSS_ it also represents an amount of heart stress during an activity. It depends on exercise duration and intensity 
+and provides an good indicator to compare commitment between activities.
 
-Ok, Cool... But how this works?!  
+_TRIMP_ has same goal than _Strava Suffer Score_. Both scores are correlated.
 
-StravistiX computes _TRIMP_ on activities using the most sophisticated approach: _TRIMP Exponental Heart Rate Scaling_ which use your _Heart Rate Reserve or HRR_. _HRR_ is basically your heart effort level according to your heart capacity .  
+**Mathematical view:**
 
-What are all these terms?! Don't panic... Here is an explanation from a Math view (you may hate that, sorry...).  
+StravistiX computes _TRIMP_ on activities using the most sophisticated approach: _TRIMP Exponental Heart Rate Scaling_ which use your _Heart Rate Reserve or HRR_. _HRR_ is basically your heart effort level according to your heart capacity.  
 
 > $Training Impulse = \displaystyle\sum_{t=0_{min}}^t{\delta t~\times~HRR~\times~0.64^{k~\times~HRR}}$
 
@@ -20,12 +45,6 @@ What are all these terms?! Don't panic... Here is an explanation from a Math vie
 With _HRR = Heart Rate Reserve = Heart effort level according to heart capacity_ defined by  
 
 > $HRR=\frac{HR~-~HR_{rest}}{HR_{max}~-~HR_{rest}}$
-
-According this _TRIMP Exponental Heart Rate Scaling_ formula, the longer you ride at full throttle, the more you SCORE !  
-
-But this heart score seems to be _Strava Suffer Score_?! Not really... _Strava Suffer Score_ is only inspired by the TRIMP concept. However the idea is same and both score are correlated.  
-
-Need more infos? Then read more about HRR here: _http://fellrnr.com/wiki/Heart_Rate_Reserve_ and TRIMP here: _http://fellrnr.com/wiki/TRIMP_ 
 
 ## %Heart Rate Reserve Average
 ---
