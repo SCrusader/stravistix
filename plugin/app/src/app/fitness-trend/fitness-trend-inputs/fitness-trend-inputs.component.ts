@@ -78,6 +78,7 @@ export class FitnessTrendInputsComponent implements OnInit {
 	}
 
 	public ngOnInit(): void {
+		this.onShowInfo();
 	}
 
 	public onLastPeriodSelected(): void {

@@ -1,24 +1,96 @@
+<h1 class="mat-display-1">Fitness trend user guide</h1>
 <mat-dialog-content class="mat-body-1">
 
-	<div class="disclaimer">
-		The multi sports fitness trend is based on an impulse-response model by <i>Dr. Eric W. Banister</i>
-		in 1975 and <i>Andrew R. Coggan</i> later. The following reference has been used: <a
-		href="http://fellrnr.com/wiki/Modeling_Human_Performance" target="_blank">Modeling Human
-		Performance, fellrnr.com</a>.
+	<div>
+		<h2 class="mat-headline">Principles</h2>
+		In simplified terms, each efforts made involves different levels of fatigue depending on stress you put in.
+		Your body reacts to these solicitations and makes you "stronger" for the following efforts.
+		Through all these efforts you create a "training base" over time called "fitness".
+		To put numbers on fitness and fatigue over time, every efforts have to be measured. To measure an activity
+		effort, stress
+		scores are being used.<br/><br/>
+
+		It exists several recognized stress scores calculation methods for an activity depending on available sensors
+		(they are detailed in a further section).
+
+		<ul>
+			<li>
+				Using a Heart Rate Monitor:
+				<ul>
+					<li>
+						<i>Training Impulse (TRIMP)</i>. Represents a training load based on your activity heart rate
+						data. It depends on exercise duration and intensity.
+					</li>
+					<li>
+						<i>Heart Rate Stress Score (HRSS)</i>. Based on <i>TRIMP</i>, <i>HRSS</i> also represents a
+						training load based on your activity heart rate data.
+						<i>HRSS</i> is more accurate than <i>TRIMP</i> it-self. The use of <i>HRSS</i> is recommend over
+						<i>TRIMP</i> in fitness trend.
+						Note that <i>HRSS</i> is equivalent to <i>HrTSS&reg;</i> from TrainingPeaks&trade;
+					</li>
+				</ul>
+			</li>
+			<li>
+				Using a Cycling Power Meter:
+				<ul>
+					<li><i>Power Stress Score (PSS)</i>. Calculated from workout moving duration and athlete <i>Cycling
+						Functional Threshold Power (FTP)</i>. Note that <i>PSS</i> is equivalent to <i>TSS&reg;</i> from
+						TrainingPeaks&trade;
+					</li>
+				</ul>
+			</li>
+			<li>
+				Without sensors:
+				<ul>
+					<li><i>Swimming Stress Score (SSS)</i>: Calculated from workout moving duration, distance and
+						athlete <i>Swimming Functional Threshold Pace (SFTP)</i>. Note that <i>SSS</i> is equivalent to
+						<i>sTSS&reg;</i> from TrainingPeaks&trade;
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<br/>
+
+		Each activity having a stress score is a kind of "impulse" causing its own amount of fatigue and fitness
+		background.<br/><br/>
+
+		All these "impulses" can be entered in a mathematical impulse-response model which provide a "view" of the
+		fatigue and fitness over time. This model is the "fitness trend" also called "Performance Management Chart" in
+		TrainingPeaks&trade;.It has been created by <i>Dr. Eric W. Banister</i> and <i>Andrew R.Coggan</i>
+	</div>
+	<div>
+		<h2 class="mat-headline">Reading the graph</h2>
+
+		<h3 class="mat-title">Fitness, Fatigue and Form</h3>
+
+		As mentioned earlier the fitness trend graph provides a measure of your <i>Fatigue</i> and <i>Fitness</i>
+		background over time.
+
+		It also provide a measure of your <i>Form</i>. The <i>Form</i> represents you if you are
+
+		<h3 class="mat-title">Training zones</h3>
+
+		<!--The Fitness, Fatigue and Form graph
+
+		This model will show you:
+		<ul>
+			<li>Your <i>Fitness</i> based on your chronic load</li>
+			<li>Your <i>Fatigue</i> based on your acute load</li>
+			<li>Your <i>Form</i> or stress balance</li>
+		</ul>-->
+
+	</div>
+	<div>
+		<h2 class="mat-headline">Stress scores explained</h2>
+
+		<h1 class="mat-title">Heart Rate Stress Score (HRSS)</h1>
+		<h1 class="mat-title">Training Impulse (TRIMP)</h1>
+		<h1 class="mat-title">Power Stress Score (PSS)</h1>
+		<h1 class="mat-title">Swimming Stress Score (SSS)</h1>
 	</div>
 
-	<mat-divider></mat-divider>
-
 	<div>
-		<h3 class="mat-title">About Multi-Sports Fitness Trend</h3>
-		The fitness trend is "Multi-sports" oriented as long as you hold a <i>heart rate monitor</i> and/or <i>cycling.
-		power meter</i> and/or <i>swimming activities having distance & time</i>. The trend is calculated from your
-		various heart rate stress,
-		and/or cycling power stress and/or swimming stress given in your activities.
-	</div>
-
-	<div>
-		<h3 class="mat-title">Heart Rate Stress Score (all workout types)</h3>
+		<h3 class="mat-headline">Heart Rate Stress Score (all workout types)</h3>
 		A heart rate stress is represented by a value called <i>Training Impulse</i> or <i>Training Impulse</i>.
 		Training Impulse
 		concept has been developed by Dr. Eric W. Banister. Basically, it represents the amount of heart stress during
@@ -42,7 +114,7 @@
 	</div>
 
 	<div>
-		<h3 class="mat-title">Power Stress Score (cycling only)</h3>
+		<h3 class="mat-headline">Power Stress Score (cycling only)</h3>
 		If you own a power meter and you activated the cycling power meter option in the feature, then the "Power Stress
 		Score (PSS)" will be used instead of <i>Training Impulse</i> on cycling activities only if available.
 		<br/><br/>
@@ -52,14 +124,14 @@
 			[expression]="'PSS=\\frac{EffortInSeconds~\\times~WeigthedPower~\\times~Intensity}{Cycling FTP~\\times~3600}~\\times~100'"></katex>
 	</div>
 
-	<div>
-		<i>Note: PSS is equivalent to Training Stress Score&reg; (TSS&reg;) from TrainingPeaks&trade;. <a
-			href="https://www.trainingpeaks.com/blog/what-is-tss/" target="_blank">Learn more from
-			TrainingPeaks&trade;</a></i>
-	</div>
+	<!--	<div>
+            <i>Note: PSS is equivalent to Training Stress Score&reg; (TSS&reg;) from TrainingPeaks&trade;. <a
+                href="https://www.trainingpeaks.com/blog/what-is-tss/" target="_blank">Learn more from
+                TrainingPeaks&trade;</a></i>
+        </div>-->
 
 	<div>
-		<h3 class="mat-title">Swimming Stress Score</h3>
+		<h3 class="mat-headline">Swimming Stress Score</h3>
 		A "Swimming Stress Score" (Swim SS) can be computed for each of your swim activities if your "Swimming
 		Functional Threshold Pace" (Swim FTP) has been entered inside athlete settings and you enabled swimming stress
 		score option. No heart rate monitor is required. Even a swimming manual activity will be handled by the
@@ -74,8 +146,8 @@
 		<katex [expression]="'Intensity=\\frac{NormalizedSwimSpeed}{Swim~FTP}'"></katex>
 		<br/><br/>
 
-		<a href="https://www.trainingpeaks.com/blog/calculating-swimming-tss-score/" target="_blank">Learn more from
-			TrainingPeaks&trade;.</a>
+		<!--		<a href="https://www.trainingpeaks.com/blog/calculating-swimming-tss-score/" target="_blank">Learn more from
+                    TrainingPeaks&trade;.</a>-->
 	</div>
 
 	<div>
@@ -84,11 +156,11 @@
 			instead of Swim SS</i>
 	</div>
 
-	<h3 class="mat-title">Reading Curves</h3>
+	<h3 class="mat-headline">Reading Curves</h3>
 	<div>
 		The Fitness, Fatigue and Form graph and table is based off an impulse-response model first developed by Dr. Eric
-		W. Banister in 1975. It was later redefined by <a href="http://www.peakscoachinggroup.com/DrAndrewCoggan"
-														  target="_blank">Andrew R. Coggan</a>.
+		W. Banister in 1975. It was later redefined by <!--<a href="http://www.peakscoachinggroup.com/DrAndrewCoggan"
+														  target="_blank">Andrew R. Coggan</a>.-->
 		This model will show you:
 		<ul>
 			<li>Your <i>Fitness</i> based on your chronic load</li>
@@ -138,8 +210,8 @@
 				</ul>
 			</li>
 			<div>
-				<a href="http://www.joefrielsblog.com/2015/12/managing-training-using-tsb.html" target="_blank">Read
-					more from joefrielsblog.com</a>
+				<!--			<a href="http://www.joefrielsblog.com/2015/12/managing-training-using-tsb.html" target="_blank">Read
+                                more from joefrielsblog.com</a>-->
 			</div>
 			<div>
 				Be fit doesn't mean you are ready to race at your higher level. A negative <i>Form</i> would reveal that
