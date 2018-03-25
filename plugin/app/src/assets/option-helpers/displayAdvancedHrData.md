@@ -1,40 +1,34 @@
 _Note: You have to wear an heart rate monitor to provide heart rate data to your strava activities and thus enjoy the below features._  
 
-## Heart Rate Stress Score (HRSS)
+# Heart Rate Stress Score (HRSS)
 ---
-In short, the _Heart Rate Stress Score_ represents an training load based on activity heart rate data. _HRSS_ depends on exercise duration and intensity. 
-It provides an good indicator to compare commitment between activities. _HRSS_ is more accurate than _TRIMP (TRaining IMPulse)_ itself (explained below), especially for fitness trend.
+In short, the _Heart Rate Stress Score_ represents a training load based on your heart rate data during an activity. _HRSS_ depends on exercise duration and intensity. 
+It provides a good indicator to compare commitment between activities.
 
-In full _HRSS_ is based on time in heart rate zones derived from an athlete's _Lactate Threshold Heart Rate (LTHR)_. _LTHR_ is the point, above which, increased blood acidification occurs in your body. 
-Above this threshold your endurance performance will rapidly decrease. By default _LTHR_ is 86% of _Max HR_. You can setup your own _LTHR_ in athlete settings.
+In full _HRSS_ is based on time in heart rate zones derived from an athlete's _Lactate Threshold Heart Rate (LTHR)_. Where, _LTHR_ is the point, above which, increased blood acidification occurs in your body. 
+Above this threshold your endurance performance will rapidly decrease. Basically it's the latest best average heart rate you can hold during 30 minutes. By default _LTHR_ is 86% of _Max HR_. You can setup your own _LTHR_ in athlete settings otherwise this default value will be used.
 
-_HRSS_ is equivalent to _HrTSS™_ from TrainingPeaks [(see training stress scores explained by trainingpeaks.com)](https://help.trainingpeaks.com/hc/en-us/articles/204071944-Training-Stress-Scores-TSS-Explained) and is correlated to _Strava Suffer Score_
+Note that _HRSS_ is equivalent to _HrTSS&reg;_ from TrainingPeaks&trade; [(see Training Stress Scores&reg; explained by trainingpeaks.com)](https://help.trainingpeaks.com/hc/en-us/articles/204071944-Training-Stress-Scores-TSS-Explained) and is correlated to _Strava Suffer Score_
 
-**Mathematical view:**
+You should also notice that _HRSS_ is based on _TRaining IMPulse (TRIMP)_ explained below section. However _HRSS_ is more accurate than _TRIMP_ itself, especially for fitness trend since it takes care of athlete's _LTHR_.
 
-> $HRSS = \frac{Activity~Trimp}{OneHourTrimp@LTHR}~\times~100$
+**From a mathematical view:**
 
-where
+> $HRSS = \frac{Activity~Trimp}{OneHourTrimp@LTHR}~\times~100~~~where~~~OneHourTrimp@LTHR = 60min~\times~HRR@LTHR~\times~0.64^{k~\times~HRR@LTHR}$
 
-> $OneHourTrimp@LTHR = 60min~\times~HRR@LTHR~\times~0.64^{k~\times~HRR@LTHR}$
+> $with~~HRR@LTHR = \frac{LTHR~-~HR_{rest}}{HR_{max}~-~HR_{rest}}~~and~~k=1.92~~for~mens~~or~~1.67~~for~womens$
 
-with
+*_HRR_ stands for _Heart Rate Reserve_. It is explained below.
 
-> $HRR@LTHR = \frac{LTHR~-~HR_{rest}}{HR_{max}~-~HR_{rest}}~~and~~k=1.92~~for~mens~~or~~1.67~~for~womens$
-
-
-_TRIMP_ stand for _TRaining IMPulse_ and _HRR_ for _Heart Rate Reserve_. They are both explained below.
-
-
-## TRaining IMPulse (TRIMP)
+# TRaining IMPulse (TRIMP)
 ---
+_TRIMP_ has been developed by Dr Eric Banister as a method to quantify training load. _TRIMP_ takes into consideration the intensity of exercise as calculated by the _Heart Rate Reserve (HRR)_ method (explained below) and the duration of exercise. Like _HRSS_, it provides a good indicator to compare commitment between activities.
 
-_TRIMP_ has been introduced by Dr Eric Banister to model the human athletic performance. Like _HRSS_ it also represents an amount of heart stress during an activity. It depends on exercise duration and intensity 
-and provides an good indicator to compare commitment between activities.
+_TRIMP_ has same goal than _Strava Suffer Score_ and both scores are correlated.
 
-_TRIMP_ has same goal than _Strava Suffer Score_. Both scores are correlated.
+Note that _TRIMP_ is less accurate than _HRSS_ itself. You should concentrate yourself on the _HRSS_ indicator since it takes care of your _LTHR_.
 
-**Mathematical view:**
+**From a mathematical view:**
 
 StravistiX computes _TRIMP_ on activities using the most sophisticated approach: _TRIMP Exponental Heart Rate Scaling_ which use your _Heart Rate Reserve or HRR_. _HRR_ is basically your heart effort level according to your heart capacity.  
 
@@ -42,15 +36,15 @@ StravistiX computes _TRIMP_ on activities using the most sophisticated approach:
 
 > $where~~k=1.92~~(for~mens)~~~or~~~k=1.67~~(for~womens)$  
 
-With _HRR = Heart Rate Reserve = Heart effort level according to heart capacity_ defined by  
+With _HRR = Heart Rate Reserve = Heart effort level according to heart capacity_ defined by:
 
 > $HRR=\frac{HR~-~HR_{rest}}{HR_{max}~-~HR_{rest}}$
 
-## %Heart Rate Reserve Average
+# %Heart Rate Reserve Average
 ---
 
 Represents the stress level reached during an activity according to your heart capacity. 
-As mentionned into _TRaining IMPulse or TRIMP_ explanation section, Heart Rate Reserve is basically a heart effort level according to a heart capacity:  
+As mentionned into _TRaining IMPulse (TRIMP)_ explanation section, _Heart Rate Reserve_ is basically a heart effort level according to a heart capacity:  
 
 > $HRR=\frac{HR~-~HR_{rest}}{HR_{max}~-~HR_{rest}}$
 
@@ -60,9 +54,9 @@ Consequently _%Heart Rate Reserve Average_ is defined by
 
 > $\%HRR_{average}=\frac{HR_{average}~-~HR_{rest}}{HR_{max}~-~HR_{rest}}~\times~100$
 
-If you rode with a %HRR Avg of 100% this seems you were at full capacity of your heart during the whole activity. It's impossible... But try to get the higher percentage ;) You will get a better _TRIMP_ score in the same way.  
+If you run/ride with a _HRR_ of 100% this seems you were at full capacity of your heart during the whole activity. It's impossible... But try to get the higher percentage ;) You will get a better _HRSS_ & _TRIMP_ score in the same way.  
 
-## Quartiles and median
+# Quartiles and median
 ---
 
 For understanding these indicators, we assume that 0% to 100% are all the heart rates sorted ascending you obtained during an activity.
