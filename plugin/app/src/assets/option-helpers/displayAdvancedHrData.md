@@ -6,7 +6,7 @@ In short, the _Heart Rate Stress Score_ represents a training load based on your
 It provides a good indicator to compare commitment between activities.
 
 In full _HRSS_ is based on time in heart rate zones derived from an athlete's _Lactate Threshold Heart Rate (LTHR)_. Where, _LTHR_ is the point, above which, increased blood acidification occurs in your body. 
-Above this threshold your endurance performance will rapidly decrease. Basically it's the latest best average heart rate you can hold during 30 minutes. By default _LTHR_ is 86% of _Max HR_. You can setup your own _LTHR_ in athlete settings otherwise this default value will be used.
+Above this threshold your endurance performance will rapidly decrease. Basically it's the latest best average heart rate you can maintain for up to an hour. By default _LTHR_ is 86% of _Max HR_. You can setup your own _LTHR_ in athlete settings otherwise this default value will be used.
 
 Note that _HRSS_ is equivalent to _HrTSS&reg;_ from TrainingPeaks&trade; [(see Training Stress Scores&reg; explained by trainingpeaks.com)](https://help.trainingpeaks.com/hc/en-us/articles/204071944-Training-Stress-Scores-TSS-Explained) and is correlated to _Strava Suffer Score_
 

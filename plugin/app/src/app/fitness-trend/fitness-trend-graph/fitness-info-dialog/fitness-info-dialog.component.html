@@ -2,16 +2,34 @@
 <mat-dialog-content class="mat-body-1">
 
 	<div>
-		<h2 class="mat-headline">Principles</h2>
-		In simplified terms, each efforts made involves different levels of fatigue depending on stress you put in.
-		Your body reacts to these solicitations and makes you "stronger" for the following efforts.
-		Through all these efforts you create a "background training base" over time called "fitness".
-		To put numbers on fitness and fatigue over time, every efforts have to be measured. To measure an activity
-		effort, stress
-		scores are being used.<br/><br/>
 
-		It exists several recognized stress scores calculation methods for an activity depending on available sensors
-		(they are detailed in a further section).
+		<h2 class="mat-headline">The basics</h2>
+		In simplified terms, the fitness trend is a kind of "black box system" that modelizes the response of your body
+		exposed to various efforts performed over time.
+		The modelization admits that each effort results in an amount of <i>Fatigue</i> and <i>Fitness</i>.
+		Then an activity generates more <i>Fatigue</i> than the acquired <i>Fitness</i>.<br/><br/>
+
+		<i>Fatigue</i> is quite easy to explain. It's the tired feelings which limits your performance. <i>Fitness</i>
+		is the
+		foundations, the potential availability of the athlete. An athlete can't get into big workouts or races without
+		a minimum of fitness acquired. When
+		resting, both fatigue and fitness are eliminated over days. The difference is that fatigue is lost faster than
+		fitness.<br/><br/>
+
+		Based on this observation <i>Fitness</i> can be higher than <i>Fatigue</i> on some periods: it's a sign of a
+		"freshness" <i>Form</i>. This state can be targeted by
+		athletes for races or big days. Also, the <i>Fitness</i> can be lower than <i>Fatigue</i> it-self. It isn't
+		necessary a sign of abnormal training. If difference is
+		reasonable, athlete is probably in an "optimal" <i>Form</i> to build a solid fitness. However if <i>Fitness</i>
+		is <strong>too low</strong> compared to <i>Fatigue</i>, athlete can reach the over training limit. Athlete
+		should consider rest when this <i>Form</i> is reached.
+		These "limits" are covered in details through a <strong>training zones</strong> section below.<br/><br/>
+
+		To put numbers on fitness, fatigue and form over time, each efforts have to be quantified. This is where "stress
+		scores" are used.<br/><br/>
+
+		It exists several recognized stress scores calculation methods depending on available sensors. These stress
+		scores are detailed in a further section too.
 
 		<ul>
 			<li>
@@ -19,14 +37,15 @@
 				<ul>
 					<li>
 						<i>Training Impulse (TRIMP)</i>. Represents a training load based on your activity heart rate
-						data. It depends on exercise duration and intensity.
+						data. Depends on exercise duration and intensity.
 					</li>
 					<li>
 						<i>Heart Rate Stress Score (HRSS)</i>. Based on <i>TRIMP</i>, <i>HRSS</i> also represents a
-						training load based on your activity heart rate data.
-						<i>HRSS</i> is more accurate than <i>TRIMP</i> it-self. The use of <i>HRSS</i> is recommend over
-						<i>TRIMP</i> in fitness trend.
-						Note that <i>HRSS</i> is equivalent to <i>HrTSS&reg;</i> from TrainingPeaks&trade;
+						training load from heart rate data. <i>HRSS</i> is prefered over <i>TRIMP</i>
+						since it take care of user <i>Lactate Threshold Heart Rate (LTHR)</i>. In few words, <i>LTHR</i>
+						is the best average heart rate that an athlete can maintain for up to an hour. <i>LTHR</i> is
+						configurable in athlete settings. <i>HRSS</i> is equivalent to <i>HrTSS&reg;</i> from
+						TrainingPeaks&trade;
 					</li>
 				</ul>
 			</li>
@@ -34,7 +53,7 @@
 				Using a Cycling Power Meter:
 				<ul>
 					<li><i>Power Stress Score (PSS)</i>. Calculated from workout moving duration and athlete <i>Cycling
-						Functional Threshold Power (FTP)</i>. Note that <i>PSS</i> is equivalent to <i>TSS&reg;</i> from
+						Functional Threshold Power (FTP)</i>. <i>PSS</i> is equivalent to <i>TSS&reg;</i> from
 						TrainingPeaks&trade;
 					</li>
 				</ul>
@@ -43,25 +62,26 @@
 				Without sensors:
 				<ul>
 					<li><i>Swimming Stress Score (SSS)</i>: Calculated from workout moving duration, distance and
-						athlete <i>Swimming Functional Threshold Pace (SFTP)</i>. Note that <i>SSS</i> is equivalent to
+						athlete <i>Swimming Functional Threshold Pace (SFTP)</i>. <i>SSS</i> is equivalent to
 						<i>sTSS&reg;</i> from TrainingPeaks&trade;
+					</li>
+					<li>
+						More stress scores without sensors are planned...
 					</li>
 				</ul>
 			</li>
 		</ul>
 		<br/>
 
-		Each activity having a stress score is a kind of "impulse" causing its own amount of fatigue and fitness
-		background. Fatigue is easy to understand: It's the tired feelings which limits your performance.
-		Fitness is basically the foundations, the potential availability of the athlete... You can't get into big
-		rides/runs or races without a minimum of fitness acquired.<br/><br/>
-
-		All these "impulses" can be entered in a mathematical impulse-response model which provide a "view" of the
-		fatigue and fitness over time. This model is the "fitness trend" also called "Performance Management Chart" in
-		TrainingPeaks&trade;.
+		Each activity with a stress score may be related to an "impulse" causing its own amount of fatigue and fitness.
+		An impulse amplitude is directly correlated to the stress score value.<br/><br/>
+		All "impulses" are injected in the "black box" model which provide a "view" of the fatigue, fitness and form
+		over time. This model is also
+		called "Performance Management Chart" in TrainingPeaks&trade;.
 	</div>
 	<div>
-		<h2 class="mat-headline">Reading the fitness trend graph</h2>
+		<h2 class="mat-headline">Training zones</h2>
+		<!--<h2 class="mat-headline">Reading the fitness trend graph</h2>-->
 
 		<!--<h2 class="mat-headline">Fitness, Fatigue and Form</h2>-->
 		<!--As mentioned earlier the fitness trend graph provides a measure of your <i>Fatigue</i> and <i>Fitness</i> over time.-->
@@ -69,14 +89,14 @@
 		<!--<h3 class="mat-title">Fatigue</h3>-->
 		<!--<h3 class="mat-title">Fitness</h3>-->
 
-		Fitness is basically the foundations, the potential availability of the athlete... You can't get into big
+		<!--Fitness is basically the foundations, the potential availability of the athlete... You can't get into big
 		rides/runs
 		or races without a minimum of fitness acquired. If that curve is too regular or too flat, it is not usually a
 		sign of good training. <br/><br/>
 
 		Fatigue is easy to understand: It's the tired feelings which limits your performance. This curve varies much
 		faster than <i>Fitness</i> curve. On <i>Fatigue</i> curve, you will see the fatigue climbing sharply in response
-		where you performed workouts with a high stress. But also go down quickly as you take few days off.
+		where you performed workouts with a high stress. But also go down quickly as you take few days off.-->
 
 		<!--The <i>Form</i> represents you if you are-->
 
@@ -87,7 +107,7 @@
 		-->
 
 
-		<h3 class="mat-title">Training zones</h3>
+		<!--<h3 class="mat-title">Training zones</h3>-->
 
 		<!--The Fitness, Fatigue and Form graph
 
@@ -116,9 +136,9 @@
 		concept has been developed by Dr. Eric W. Banister. Basically, it represents the amount of heart stress during
 		an activity: the longer you go at full throttle during an activity, the more <i>Training Impulse</i> of activity
 		goes up!
-		<i>Training Impulse</i> has both a positive and a negative effect. The positive effect is called <i>fitness</i>,
-		and the negative effect is called <i>fatigue</i>. <i>Fitness</i> and <i>fatigue</i> can combined to provide a
-		value of <i>form</i> & <i>Performance</i>.<br/><br/>
+		<i>Training Impulse</i> has both a positive and a negative effect. The positive effect is called <i>Fitness</i>,
+		and the negative effect is called <i>Fatigue</i>. <i>Fitness</i> and <i>Fatigue</i> can combined to provide a
+		value of <i>Form</i> & <i>Performance</i>.<br/><br/>
 
 		<i>Training Impulse</i> is defined by:<br/><br/>
 
